@@ -1,12 +1,7 @@
-import { Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Redirect } from "expo-router";
 
 export default function Index() {
     return (
-        <SafeAreaView>
-            <Text>
-                Index
-            </Text>
-        </SafeAreaView>
+        <Redirect href='/(public)/login'/>
     )
 }
