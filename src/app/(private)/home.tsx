@@ -1,11 +1,28 @@
-import { Text, View } from "react-native";
+import { useAuthStore } from '@/shared/store/auth.store'
+import { router } from 'expo-router'
+import { Text, TouchableOpacity, View } from 'react-native'
+
 
 export default function Home() {
+    const { logout } = useAuthStore()
+
     return (
-        <View>
-            <Text>
-                Tela de Home
-            </Text>
+        <View
+            style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
+            <Text>Home</Text>
+            <TouchableOpacity
+                onPress={() => {
+                    logout()
+                    router.replace('/(public)/login')
+                }}
+            >
+                <Text>Logout</Text>
+            </TouchableOpacity>
         </View>
     )
 }

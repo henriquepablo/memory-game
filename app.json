@@ -10,7 +10,8 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.lacerda.mobile.memory-game"
+      "bundleIdentifier": "com.lacerda.mobile.memory-game",
+      "appleTeamId": "VK7UVMLX8D"
     },
     "android": {
       "adaptiveIcon": {
